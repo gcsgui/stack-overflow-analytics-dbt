@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_stackoverflow__jobs
+    description: "Dados crus de empregos do Stack Overflow."
+
+  - name: int_salary_unpivoted
+    description: "Transformação intermediária de salários."
+
+  - name: fct_tech_salary_trends
+    description: "Tabela final de tendências salariais."
+    columns:
+      - name: language
+        tests:
+          - not_null
+
+  - name: tecnologias_populares
+    description: "Ranking de tecnologias."
